@@ -13,7 +13,11 @@ export class ButtonAction extends React.Component {
         super(props);
         this.backup = new Backup(
             // This path will be set by FolderPick.
-            path.join(homedir(), "AppData/Roaming/Spotify/Apps"),
+            
+            //NOTE: to get backup functioning properly, 
+            //pointing to Spotify's default MacOS location in the Applications folder
+            "/Applications/Spotify.app/Contents/Resources/Apps",
+            //path.join(homedir(), "AppData/Roaming/Spotify/Apps"),
         );
         // Bridge this one too
         this.extractor = new Extractor(path.join(process.cwd(), "Extracted"));

@@ -18,8 +18,7 @@ export class Backup {
             if (!this.isUserEmpty()) {
                 this.cleanBackup();
             }
-
-            if (!fs.readdirSync(this.userPath)) {
+            if (!fs.existsSync(this.userPath)) {
                 fs.mkdirSync(this.userPath);
             }
 

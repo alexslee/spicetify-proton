@@ -38,7 +38,7 @@ export class Extractor {
             if (err) {
                 Dialog("Error", {
                     description: err.message,
-                    title: "Extracting to Raw",
+                    title: "Extracting to Themed",
                 });
             }
         });
